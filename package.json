@@ -4,7 +4,8 @@
   "description": "My home page",
   "main": "index.js",
   "scripts": {
-    "setup": "npx tailwindcss -i ./src/css/input.css -o ./public/output.css --watch"
+    "setup": "npx tailwindcss -i ./src/css/input.css -o ./public/css/output.css",
+    "dev": "npx tailwindcss -i ./src/css/input.css -o ./public/css/output.css --watch"
   },
   "author": "Tony Wang",
   "license": "ISC",
