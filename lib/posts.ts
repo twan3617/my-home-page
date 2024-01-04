@@ -11,7 +11,8 @@ const postsDirectory = path.join(process.cwd(), 'posts');
 
 export function getSortedPostsData() {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = []
+  fs.readdirSync(postsDirectory).forEach(file => { if(file != ".DS_Store") { fileNames.push(file) }}); // Ignore .DS_Store files
   const allPostsData = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '');
